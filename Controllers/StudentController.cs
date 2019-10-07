@@ -126,7 +126,11 @@ namespace DhakaUniversity.Controllers
             }
             return View(student);
         }
+        */
 
+
+
+        /*  Old delete code
         // GET: Student/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -141,9 +145,28 @@ namespace DhakaUniversity.Controllers
             }
             return View(student);
         }
-
         */
 
+        [HttpGet]
+        public ActionResult Delete(int? id, bool? saveChangesError=false)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (saveChangesError.GetValueOrDefault())
+            {
+                ViewBag.ErrorMessage = "Delete Failed. Please try again";
+            }
+            Student student = db.Students.Find(id);
+            if (student == null)
+            {
+                return HttpNotFound();
+            }
+            return View(student);
+        }
+
+        /*
         // POST: Student/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -152,6 +175,25 @@ namespace DhakaUniversity.Controllers
             Student student = db.Students.Find(id);
             db.Students.Remove(student);
             db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        */
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                Student student = db.Students.Find(id);
+                db.Students.Remove(student);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (DataException)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                return RedirectToAction("Delete", new { id = id, saveChangesError = true });
+            }
             return RedirectToAction("Index");
         }
 
