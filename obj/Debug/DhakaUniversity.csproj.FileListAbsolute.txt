@@ -69,8 +69,6 @@ F:\webworks\aspdotnet\DhakaUniversity\bin\System.Web.WebPages.Razor.xml
 F:\webworks\aspdotnet\DhakaUniversity\bin\Newtonsoft.Json.xml
 F:\webworks\aspdotnet\DhakaUniversity\bin\Antlr3.Runtime.pdb
 F:\webworks\aspdotnet\DhakaUniversity\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.csprojAssemblyReference.cache
-F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.csproj.CoreCompileInputs.cache
 F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.csproj.CopyComplete
 F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.dll
 F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.pdb
@@ -78,3 +76,4 @@ F:\webworks\aspdotnet\DhakaUniversity\bin\EntityFramework.dll
 F:\webworks\aspdotnet\DhakaUniversity\bin\EntityFramework.SqlServer.dll
 F:\webworks\aspdotnet\DhakaUniversity\bin\EntityFramework.xml
 F:\webworks\aspdotnet\DhakaUniversity\bin\EntityFramework.SqlServer.xml
+F:\webworks\aspdotnet\DhakaUniversity\obj\Debug\DhakaUniversity.csprojAssemblyReference.cache
